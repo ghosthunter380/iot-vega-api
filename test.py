@@ -2,11 +2,9 @@ import json
 import websocket
 ws = websocket.WebSocket()
 ws.connect("ws://192.168.1.109:8002")
-
 '''ws.send(json.dumps({"cmd":"auth_req", "login":"user", "password":"user"}))
 result =  ws.recv()
 print (result)'''
-
 def login():
     username = input("Please enter username: ")
     password = input("Please enter password: ")
