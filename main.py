@@ -21,7 +21,12 @@ def login():
 def get_payload():
     devEui = input("Please enter devEui: ")
     msg={
-        "cmd":"get_data_req", "devEui":devEui
+        "cmd":"get_data_req",
+        "devEui":devEui,
+        "select":
+        {
+            "port":2
+        }
     }
     ws.send(json.dumps(msg))
     print(ws.recv())
